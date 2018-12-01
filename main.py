@@ -38,7 +38,6 @@ async def main():
             async with aiohttp.ClientSession() as session:
               html = await fetch(session, 'http://longquanapi.xuechebu.com/KM2/ClYyAddByMutil?ipaddress=192.168.1.106&ossdk=26&os=an&trainType=3&xxzh=51852038&isJcsdYyMode=5&imei=50E276A23A9DDADF2A9902D1F7AA81CE&appversion=6.2.5.1&params=Z1505.2018%2F12%2F' + day + '.812.&osversion=8.0.0&version=6.2.5.1&jlcbh=')
               print(html)
-            time.sleep(1)
             async with aiohttp.ClientSession() as session:
               html = await fetch(session, 'http://longquanapi.xuechebu.com/KM2/ClYyAddByMutil?ipaddress=192.168.1.106&ossdk=26&os=an&trainType=3&xxzh=51852038&isJcsdYyMode=5&imei=50E276A23A9DDADF2A9902D1F7AA81CE&appversion=6.2.5.1&params=Z1505.2018%2F12%2F' + day + '.15.&osversion=8.0.0&version=6.2.5.1&jlcbh=')
               print(html)
