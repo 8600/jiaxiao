@@ -14,15 +14,15 @@ async def fetch(session, url):
     return await response.text()
 
 async def main():
-  # 获取四天后日期
-  today = datetime.date.today() + datetime.timedelta(days=6)
-  day = str(today.day)
   # while True:
   #   async with aiohttp.ClientSession() as session:
   #     html = await fetch(session, 'http://longquanapi.xuechebu.com/KM2/ClYyAddByMutil?ipaddress=192.168.1.106&ossdk=26&os=an&trainType=3&xxzh=51852038&isJcsdYyMode=5&imei=50E276A23A9DDADF2A9902D1F7AA81CE&appversion=6.2.5.1&params=Z1505.2018%2F12%2F' + day + '.812.&osversion=8.0.0&version=6.2.5.1&jlcbh=')
   #     print(html)
   #   time.sleep(1)
   while True:
+    # 获取四天后日期
+    today = datetime.date.today() + datetime.timedelta(days=6)
+    day = str(today.day)
     print(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())))
     h = time.strftime("%H")
     if (h == "06" or h == "07"):
@@ -66,7 +66,8 @@ async def main():
             print(html)
           time.sleep(1)
         else:
-          exit()
+          print("等待20小时")
+          time.sleep(60 * 60 * 20)
     else:
       print("再等8分钟!")
       time.sleep(480)
