@@ -42,15 +42,15 @@ def main():
           if (int(m) >= 59 and int(s) >= 44):
             print('尽全力！')
             print(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())))
-            # t = threading.Thread(target=fetch,args=(url1,))
-            # t.start()
+            t = threading.Thread(target=fetch,args=(url1,))
+            t.start()
             t = threading.Thread(target=fetch,args=(url2,))
             t.start()
             time.sleep(1)
           else:
-            # t = threading.Thread(target=fetch,args=(url1,))
-            # t.start()
-            # time.sleep(3)
+            t = threading.Thread(target=fetch,args=(url1,))
+            t.start()
+            time.sleep(3)
             t = threading.Thread(target=fetch,args=(url2,))
             t.start()
             time.sleep(3)
@@ -59,9 +59,9 @@ def main():
           time.sleep(10)
       else:
         if int(m) < 2:
-          # t = threading.Thread(target=fetch,args=(url1,))
-          # t.start()
-          # time.sleep(1)
+          t = threading.Thread(target=fetch,args=(url1,))
+          t.start()
+          time.sleep(1)
           t = threading.Thread(target=fetch,args=(url2,))
           t.start()
           time.sleep(1)
