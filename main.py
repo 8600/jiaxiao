@@ -29,8 +29,8 @@ def main():
     day = str(today.day)
     print(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())))
 
-    url1 = 'http://longquanapi.xuechebu.com/KM2/ClYyAddByMutil?ipaddress=192.168.1.106&ossdk=26&os=an&trainType=3&xxzh=51852038&isJcsdYyMode=5&imei=50E276A23A9DDADF2A9902D1F7AA81CE&appversion=6.2.5.1&params=Z1505.2018%2F12%2F' + day + '.812.&osversion=8.0.0&version=6.2.5.1&jlcbh='
-    url2 = 'http://longquanapi.xuechebu.com/KM2/ClYyAddByMutil?ipaddress=192.168.1.106&ossdk=26&os=an&trainType=3&xxzh=51852038&isJcsdYyMode=5&imei=50E276A23A9DDADF2A9902D1F7AA81CE&appversion=6.2.5.1&params=Z1505.2018%2F12%2F' + day + '.15.&osversion=8.0.0&version=6.2.5.1&jlcbh='
+    url1 = 'http://longquanapi.xuechebu.com/KM2/ClYyAddByMutil?ipaddress=192.168.1.106&ossdk=26&os=an&trainType=3&xxzh=51852038&isJcsdYyMode=5&imei=50E276A23A9DDADF2A9902D1F7AA81CE&appversion=6.2.5.1&params=Z1505.2018%2F03%2F' + day + '.812.&osversion=8.0.0&version=6.2.5.1&jlcbh='
+    url2 = 'http://longquanapi.xuechebu.com/KM2/ClYyAddByMutil?ipaddress=192.168.0.100&ossdk=28&os=an&trainType=3&xxzh=51852038&isJcsdYyMode=5&imei=6496189B528184F2173EC9E9B5E7C242&appversion=6.3.0&params=Z1505.2019%2F03%2F17.15.&osversion=9&version=6.3.0&jlcbh='
     h = time.strftime("%H")
     if (h == "06" or h == "07"):
       print("进入时间段!")
